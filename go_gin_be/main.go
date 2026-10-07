@@ -18,6 +18,7 @@ func main() {
 	DATABASE_URL := os.Getenv("DATABASE_URL")
 	log.Println("DATABASE_URL=", DATABASE_URL)
 	log.Println("GIANG NGOC THANH")
+	log.Println("THIS IS TRIGGERED AUTOMATICALLY")
 	db, _ := sql.Open("postgres", DATABASE_URL)
 
 	router := gin.Default()
