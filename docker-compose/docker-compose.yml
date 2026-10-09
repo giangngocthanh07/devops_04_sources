@@ -79,10 +79,10 @@ services:
 
   # docker run --name html_container -d -p 3000:80 html_image
   html:
-    build:
-      context: ../html
-      dockerfile: Dockerfile
-    image: html_image
+    # build:
+    #   context: ../html
+    #   dockerfile: Dockerfile
+    image: html_image:latest
     container_name: html
     ports:
       - 3002:80
