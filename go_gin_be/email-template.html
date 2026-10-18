@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Actions — ${WORKFLOW_NAME}</title>
+</head>
+<body style="margin:0;padding:0;background:#ffffff;color:#24292f;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;">
+  <!-- Success email: render after successful build steps. Variables are replaced with envsubst. -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr><td align="center" style="padding:24px 16px;">
+      <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:600px;">
+        <tr><td style="padding-bottom:28px;">GitHub Actions workflow <strong>${WORKFLOW_NAME}</strong> của repository <strong>${REPOSITORY}</strong> đã hoàn thành thành công.</td></tr>
+        <tr><td style="padding-bottom:12px;font-size:16px;font-weight:bold;">Repository Information</td></tr>
+        <tr><td style="padding:16px 18px;background:#f6f8fa;border:1px solid #dfe3e8;border-radius:8px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+            <tr><td width="35%" style="padding:8px 0;color:#656d76;">Repository</td><td style="padding:8px 0;word-break:break-all;"><a href="${REPOSITORY_URL}" style="color:#2563eb;text-decoration:none;font-weight:bold;">${REPOSITORY}</a></td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Owner</td><td style="padding:8px 0;font-weight:bold;">${REPOSITORY_OWNER}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Branch</td><td style="padding:8px 0;color:#2563eb;font-weight:bold;word-break:break-all;">${BRANCH}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Git Ref</td><td style="padding:8px 0;word-break:break-all;">${REF}</td></tr>
+          </table>
+        </td></tr>
+        <tr><td style="padding:28px 0 12px;font-size:16px;font-weight:bold;">Workflow Information</td></tr>
+        <tr><td style="padding:16px 18px;border:1px solid #dfe3e8;border-radius:8px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+            <tr><td width="35%" style="padding:8px 0;color:#656d76;">Workflow</td><td style="padding:8px 0;font-weight:bold;">${WORKFLOW_NAME}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Job</td><td style="padding:8px 0;font-weight:bold;">${JOB_NAME}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Trigger Event</td><td style="padding:8px 0;font-weight:bold;">${EVENT_NAME}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Triggered By</td><td style="padding:8px 0;font-weight:bold;">${ACTOR}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Run Number</td><td style="padding:8px 0;font-weight:bold;">#${RUN_NUMBER}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Run Attempt</td><td style="padding:8px 0;">${RUN_ATTEMPT}</td></tr>
+            <tr><td style="padding:8px 0;color:#656d76;">Run ID</td><td style="padding:8px 0;word-break:break-all;">${RUN_ID}</td></tr>
+          </table>
+        </td></tr>
+        <tr><td style="padding:28px 0 12px;font-size:16px;font-weight:bold;">Commit</td></tr>
+        <tr><td style="padding:15px 16px;background:#101722;border-radius:8px;word-break:break-all;"><a href="${COMMIT_URL}" style="color:#ffffff;text-decoration:none;font-family:Consolas,monospace;font-size:13px;">${COMMIT_SHA}</a></td></tr>
+        <tr><td style="padding:28px 0 12px;font-size:16px;font-weight:bold;">Pipeline Summary</td></tr>
+        <tr><td>
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr><td style="padding:12px 0;border-bottom:1px solid #e5e7eb;"><span style="color:#16803c;background:#dcfce7;border-radius:20px;padding:2px 5px;">&#10003;</span>&nbsp; Source validation completed</td></tr>
+            <tr><td style="padding:12px 0;border-bottom:1px solid #e5e7eb;"><span style="color:#16803c;background:#dcfce7;border-radius:20px;padding:2px 5px;">&#10003;</span>&nbsp; Build completed</td></tr>
+            <tr><td style="padding:12px 0;"><span style="color:#16803c;background:#dcfce7;border-radius:20px;padding:2px 5px;">&#10003;</span>&nbsp; Workflow finished successfully</td></tr>
+          </table>
+        </td></tr>
+        <tr><td style="padding-top:20px;"><a href="${ACTION_URL}" style="color:#2563eb;text-decoration:none;">View workflow run &rarr;</a><span style="color:#656d76;"> &nbsp; Status: ${STATUS}</span></td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

@@ -12,10 +12,10 @@ services:
 
   # docker run --name go_gin_be_container -d -p 8002:8080 --env-file=.env go_gin_be_image
   go_gin_be:
-    build:
-      context: ../go_gin_be
-      dockerfile: Dockerfile
-    image: go_gin_be_image
+    # build:
+    #   context: ../go_gin_be
+    #   dockerfile: Dockerfile
+    image: ntgiang0709/go_gin_be_image:latest
     container_name: go_gin_be
     ports:
       - 8002:8080
