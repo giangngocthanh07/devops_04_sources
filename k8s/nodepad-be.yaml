@@ -19,7 +19,7 @@ spec:
         spec:
             containers:
                 - name: nodepad-be
-                  image: vulebaolong/img-nodepad_be:latest
+                  image: ntgiang0709/img-nodepad_be:latest
                   imagePullPolicy: Always
 
                   ports:

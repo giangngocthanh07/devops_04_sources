@@ -77,7 +77,7 @@ SSH tunnel lệnh tạo cổng trung gian
 ssh -i devops.pem \
   -N \
   -L 16443:127.0.0.1:6443 \
-  ubuntu@13.251.59.204
+  ubuntu@56.10.133.76
 
 -N No remote command: không mở giao diện gõ CLI
 -L local port forward
